@@ -14,10 +14,12 @@ public sealed class BootLoader : MonoBehaviour
     {
         Addressables.LoadAssetAsync<GameObject>(PSXRenderer).Completed += 
             (asyncOperationHandle) 
-            => Instantiate(asyncOperationHandle.Result);
+            => Instantiate(asyncOperationHandle.Result
+        );
 
         Addressables.LoadAssetAsync<GameObject>(MainMenu).Completed +=
             (asyncOperationHandle)
-            => Instantiate(asyncOperationHandle.Result);
+            => Instantiate(asyncOperationHandle.Result
+        );
     }
 }
